@@ -2,10 +2,12 @@ import Foundation
 
 class ProductListingViewModel {
   private let service: ProductListingService
+  private let user: User
   private(set) var products: [ProductListingProduct] = []
 
-  init(service: ProductListingService) {
+  init(service: ProductListingService, user: User) {
     self.service = service
+    self.user = user
   }
 
   func getProducts(completion: @escaping () -> Void) {

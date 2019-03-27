@@ -1,13 +1,26 @@
 import UIKit
 
 class NavigationController: UINavigationController, ProductListingViewControllerDelegate {
+  private let viewModel: NavigationViewModel
+
+  init(viewModel: NavigationViewModel) {
+    self.viewModel = viewModel
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    let service = ProductListingServiceImplementation(api: API())
-    let viewModel = ProductListingViewModel(service: service)
-    let viewController = ProductListingViewController(viewModel: viewModel, priceFormatter: PriceFormatterImplementation(), delegate: self)
+    view.backgroundColor = .white
     navigationBar.prefersLargeTitles = true
-    viewControllers = [viewController]
+    viewModel.getUser { [weak self] productListingViewModel in
+      guard let self = self else { return }
+      let viewController = ProductListingViewController(viewModel: productListingViewModel, priceFormatter: PriceFormatterImplementation(), delegate: self)
+      self.viewControllers = [viewController]
+    }
   }
 
   // MARK: ProductListingViewControllerDelegate

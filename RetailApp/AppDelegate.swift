@@ -7,7 +7,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
     window!.makeKeyAndVisible()
-    window!.rootViewController = NavigationController()
+    let userService = UserServiceImplementation(api: API())
+    let viewModel = NavigationViewModel(service: userService)
+    window!.rootViewController = NavigationController(viewModel: viewModel)
     return true
   }
 }
