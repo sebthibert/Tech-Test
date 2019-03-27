@@ -44,6 +44,7 @@
 		BC0194E4224B9C45005D5A13 /* ProductListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194E3224B9C45005D5A13 /* ProductListingViewModel.swift */; };
 		BC0194EC224B9E0D005D5A13 /* ProductListingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0194EA224B9E0D005D5A13 /* ProductListingCollectionViewCell.xib */; };
 		BC0194ED224B9E0D005D5A13 /* ProductListingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194EB224B9E0D005D5A13 /* ProductListingCollectionViewCell.swift */; };
+		BC0194EF224BA1BD005D5A13 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194EE224BA1BD005D5A13 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		BC0194E3224B9C45005D5A13 /* ProductListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingViewModel.swift; sourceTree = "<group>"; };
 		BC0194EA224B9E0D005D5A13 /* ProductListingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductListingCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC0194EB224B9E0D005D5A13 /* ProductListingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListingCollectionViewCell.swift; sourceTree = "<group>"; };
+		BC0194EE224BA1BD005D5A13 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				BC0194DE224B9BC1005D5A13 /* ProductListing */,
 				3068059821F21F6C00B99BB8 /* ProductDetails */,
 				3046987521F0D55F0056504A /* AppDelegate.swift */,
+				BC0194EE224BA1BD005D5A13 /* NavigationController.swift */,
 				3068059F21F2292700B99BB8 /* Models */,
 				3046987C21F0D5610056504A /* Assets.xcassets */,
 				3046987E21F0D5610056504A /* LaunchScreen.storyboard */,
@@ -404,6 +407,7 @@
 				304698A721F0D70D0056504A /* Resource.swift in Sources */,
 				301581492215A99200199803 /* InformationFormatter.swift in Sources */,
 				BC0194E1224B9BF1005D5A13 /* ProductListingViewController.swift in Sources */,
+				BC0194EF224BA1BD005D5A13 /* NavigationController.swift in Sources */,
 				BC0194E4224B9C45005D5A13 /* ProductListingViewModel.swift in Sources */,
 				304698A421F0D5800056504A /* API.swift in Sources */,
 				30C4F5E521F27BBD0042865A /* ProductDetailsService.swift in Sources */,
