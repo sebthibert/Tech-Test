@@ -52,6 +52,7 @@
 		BC0194FB224BB71C005D5A13 /* MockProductListingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194F9224BB71C005D5A13 /* MockProductListingService.swift */; };
 		BC0194FC224BB71C005D5A13 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194FA224BB71C005D5A13 /* MockUserService.swift */; };
 		BC019500224BB76C005D5A13 /* ProductListingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194FF224BB76C005D5A13 /* ProductListingViewModelTests.swift */; };
+		BC019502224BB773005D5A13 /* NavigationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC019501224BB773005D5A13 /* NavigationViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		BC0194F9224BB71C005D5A13 /* MockProductListingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockProductListingService.swift; sourceTree = "<group>"; };
 		BC0194FA224BB71C005D5A13 /* MockUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUserService.swift; sourceTree = "<group>"; };
 		BC0194FF224BB76C005D5A13 /* ProductListingViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListingViewModelTests.swift; sourceTree = "<group>"; };
+		BC019501224BB773005D5A13 /* NavigationViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				3018649D223BE1630026CED6 /* Mocks */,
 				3018649A223BE0210026CED6 /* ProductDetails */,
 				BC0194FD224BB739005D5A13 /* ProductListing */,
+				BC0194FE224BB74B005D5A13 /* Navigation */,
 				3046988C21F0D5620056504A /* Info.plist */,
 				30186494223BDA050026CED6 /* Helper */,
 				30186497223BDA270026CED6 /* API */,
@@ -327,6 +330,14 @@
 				BC0194FF224BB76C005D5A13 /* ProductListingViewModelTests.swift */,
 			);
 			path = ProductListing;
+			sourceTree = "<group>";
+		};
+		BC0194FE224BB74B005D5A13 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BC019501224BB773005D5A13 /* NavigationViewModelTests.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC0194FB224BB71C005D5A13 /* MockProductListingService.swift in Sources */,
+				BC019502224BB773005D5A13 /* NavigationViewModelTests.swift in Sources */,
 				3018649F223BE1770026CED6 /* MockProductDetailsService.swift in Sources */,
 				3025808B223BC1810073704D /* PriceFormatterTests.swift in Sources */,
 				3018649C223BE0370026CED6 /* ProductDetailsViewModelTests.swift in Sources */,
