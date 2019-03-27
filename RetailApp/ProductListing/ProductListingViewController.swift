@@ -1,13 +1,19 @@
 import UIKit
 
+protocol ProductListingViewControllerDelegate: AnyObject {
+  func didSelectProduct(_ product: ProductListingProduct, withImage image: UIImage?)
+}
+
 class ProductListingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
   @IBOutlet private var collectionView: UICollectionView!
   private let viewModel: ProductListingViewModel
   private let priceFormatter: PriceFormatter
+  private weak var delegate: ProductListingViewControllerDelegate?
 
-  init(viewModel: ProductListingViewModel, priceFormatter: PriceFormatter) {
+  init(viewModel: ProductListingViewModel, priceFormatter: PriceFormatter, delegate: ProductListingViewControllerDelegate) {
     self.viewModel = viewModel
     self.priceFormatter = priceFormatter
+    self.delegate = delegate
     super.init(nibName: nil, bundle: nil)
   }
 
@@ -37,7 +43,10 @@ class ProductListingViewController: UIViewController, UICollectionViewDataSource
 
   // MARK: UICollectionViewDelegate
 
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let cell = collectionView.cellForItem(at: indexPath) as! ProductListingCollectionViewCell
+    delegate?.didSelectProduct(viewModel.products[indexPath.item], withImage: cell.imageView.image)
+  }
 
   // MARK: UICollectionViewDelegateFlowLayout
 
