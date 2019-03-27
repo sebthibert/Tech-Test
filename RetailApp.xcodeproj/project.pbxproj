@@ -51,6 +51,7 @@
 		BC0194F8224BABA3005D5A13 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194F7224BABA3005D5A13 /* NavigationViewModel.swift */; };
 		BC0194FB224BB71C005D5A13 /* MockProductListingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194F9224BB71C005D5A13 /* MockProductListingService.swift */; };
 		BC0194FC224BB71C005D5A13 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194FA224BB71C005D5A13 /* MockUserService.swift */; };
+		BC019500224BB76C005D5A13 /* ProductListingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194FF224BB76C005D5A13 /* ProductListingViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		BC0194F7224BABA3005D5A13 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		BC0194F9224BB71C005D5A13 /* MockProductListingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockProductListingService.swift; sourceTree = "<group>"; };
 		BC0194FA224BB71C005D5A13 /* MockUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUserService.swift; sourceTree = "<group>"; };
+		BC0194FF224BB76C005D5A13 /* ProductListingViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListingViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			children = (
 				3018649D223BE1630026CED6 /* Mocks */,
 				3018649A223BE0210026CED6 /* ProductDetails */,
+				BC0194FD224BB739005D5A13 /* ProductListing */,
 				3046988C21F0D5620056504A /* Info.plist */,
 				30186494223BDA050026CED6 /* Helper */,
 				30186497223BDA270026CED6 /* API */,
@@ -316,6 +319,14 @@
 				BC0194F7224BABA3005D5A13 /* NavigationViewModel.swift */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		BC0194FD224BB739005D5A13 /* ProductListing */ = {
+			isa = PBXGroup;
+			children = (
+				BC0194FF224BB76C005D5A13 /* ProductListingViewModelTests.swift */,
+			);
+			path = ProductListing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +477,7 @@
 				301864A5223BF76B0026CED6 /* TestModel.swift in Sources */,
 				301864A1223BE18D0026CED6 /* MockImageService.swift in Sources */,
 				3079EA80223BF9420088BF4C /* ProductRequestStub.swift in Sources */,
+				BC019500224BB76C005D5A13 /* ProductListingViewModelTests.swift in Sources */,
 				301864A3223BEAAB0026CED6 /* MockURLSessionProtocol.swift in Sources */,
 				BC0194FC224BB71C005D5A13 /* MockUserService.swift in Sources */,
 			);
