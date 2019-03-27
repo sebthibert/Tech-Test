@@ -47,6 +47,7 @@
 		BC0194EF224BA1BD005D5A13 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194EE224BA1BD005D5A13 /* NavigationController.swift */; };
 		BC0194F1224BAA25005D5A13 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194F0224BAA25005D5A13 /* User.swift */; };
 		BC0194F3224BAA37005D5A13 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194F2224BAA37005D5A13 /* Offer.swift */; };
+		BC0194F5224BAAD8005D5A13 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194F4224BAAD8005D5A13 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		BC0194EE224BA1BD005D5A13 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		BC0194F0224BAA25005D5A13 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BC0194F2224BAA37005D5A13 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		BC0194F4224BAAD8005D5A13 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				30590CAB2211BA4300FE716E /* ImageService.swift */,
 				30C4F5E421F27BBD0042865A /* ProductDetailsService.swift */,
 				BC0194D8224B9983005D5A13 /* ProductListingService.swift */,
+				BC0194F4224BAAD8005D5A13 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC0194F3224BAA37005D5A13 /* Offer.swift in Sources */,
+				BC0194F5224BAAD8005D5A13 /* UserService.swift in Sources */,
 				304698AB21F0D7C50056504A /* Result.swift in Sources */,
 				3046987821F0D55F0056504A /* ProductDetailsViewController.swift in Sources */,
 				BC0194D9224B9983005D5A13 /* ProductListingService.swift in Sources */,
