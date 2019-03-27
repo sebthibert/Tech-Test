@@ -25,6 +25,12 @@
                             <constraint firstAttribute="width" secondItem="5ty-LX-IYb" secondAttribute="height" multiplier="308:400" id="2u2-SB-xk9"/>
                         </constraints>
                     </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ymE-v6-aTS">
+                        <rect key="frame" x="242.5" y="4" width="123.5" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="bdK-XH-Yde"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UE5-kz-UlV">
                         <rect key="frame" x="0.0" y="538" width="370" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -40,8 +46,11 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="ymE-v6-aTS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="Anq-0d-m7K"/>
                 <constraint firstAttribute="trailing" secondItem="TUr-8A-huc" secondAttribute="trailing" id="OI9-ng-MPa"/>
                 <constraint firstAttribute="trailing" secondItem="5ty-LX-IYb" secondAttribute="trailing" id="PZa-VV-jCw"/>
+                <constraint firstItem="ymE-v6-aTS" firstAttribute="width" secondItem="5ty-LX-IYb" secondAttribute="width" multiplier="1:3" id="SSL-hy-ug8"/>
+                <constraint firstAttribute="trailing" secondItem="ymE-v6-aTS" secondAttribute="trailing" constant="4" id="TZd-d7-zwJ"/>
                 <constraint firstAttribute="trailing" secondItem="UE5-kz-UlV" secondAttribute="trailing" id="WWy-JY-XaV"/>
                 <constraint firstItem="TUr-8A-huc" firstAttribute="top" secondItem="5ty-LX-IYb" secondAttribute="bottom" constant="10" id="XDm-8f-kKa"/>
                 <constraint firstItem="5ty-LX-IYb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="i3O-ac-1oR"/>
@@ -53,8 +62,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="370" height="559"/>
             <connections>
-                <outlet property="imageView" destination="5ty-LX-IYb" id="PGx-10-p0O"/>
+                <outlet property="badgeImageView" destination="ymE-v6-aTS" id="kZH-AK-zuR"/>
                 <outlet property="priceLabel" destination="UE5-kz-UlV" id="XbA-Pn-jN8"/>
+                <outlet property="productImageView" destination="5ty-LX-IYb" id="Whg-hV-Z82"/>
                 <outlet property="titleLabel" destination="TUr-8A-huc" id="ojn-GV-pMO"/>
             </connections>
             <point key="canvasLocation" x="308.80000000000001" y="276.61169415292358"/>

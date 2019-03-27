@@ -37,7 +37,7 @@ class ProductListingViewController: UIViewController, UICollectionViewDataSource
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductListingCollectionViewCell", for: indexPath) as! ProductListingCollectionViewCell
     let product = viewModel.products[indexPath.item]
-    cell.configure(imageKey: product.imageKey, title: product.name, price: priceFormatter.formatPrice(product.price))
+    cell.configure(imageKey: product.imageKey, title: product.name, price: priceFormatter.formatPrice(product.price), badge: viewModel.badgeNameForOfferWithId(product.offerIds.first))
     return cell
   }
 
@@ -45,7 +45,7 @@ class ProductListingViewController: UIViewController, UICollectionViewDataSource
 
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let cell = collectionView.cellForItem(at: indexPath) as! ProductListingCollectionViewCell
-    delegate?.didSelectProduct(viewModel.products[indexPath.item], withImage: cell.imageView.image)
+    delegate?.didSelectProduct(viewModel.products[indexPath.item], withImage: cell.productImageView.image)
   }
 
   // MARK: UICollectionViewDelegateFlowLayout
