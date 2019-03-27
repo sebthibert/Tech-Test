@@ -17,11 +17,10 @@ class ProductListingCollectionViewCell: UICollectionViewCell {
 
   func configure(imageKey: String, title: String, price: NSAttributedString, badge: String?) {
     service.downloadImage(key: imageKey) { [weak self] result in
-      switch result {
-      case .value(let image):
-        self?.productImageView.image = image
-      case .error(let error):
-        print(error)
+      do {
+        self?.productImageView.image = try result.unwrapped()
+      } catch {
+        print(error.localizedDescription)
       }
     }
     titleLabel.text = title
@@ -29,11 +28,10 @@ class ProductListingCollectionViewCell: UICollectionViewCell {
     if let badge = badge {
       badgeImageView.isHidden = false
       service.downloadImage(key: "\(badge)_icon") { [weak self] result in
-        switch result {
-        case .value(let image):
-          self?.badgeImageView.image = image
-        case .error(let error):
-          print(error)
+        do {
+          self?.badgeImageView.image = try result.unwrapped()
+        } catch {
+          print(error.localizedDescription)
         }
       }
     }
