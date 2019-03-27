@@ -30,5 +30,12 @@ class ProductListingViewModel {
     }
     return filteredProducts
   }
+
+  func badgeNameForOfferWithId(_ id: String?) -> String? {
+    guard let offer = user.offers.first(where: { $0.id == id }) else { return nil }
+    let badges = user.availableBadges.replacingOccurrences(of: "||", with: " ").split(separator: " ").map { $0.split(separator: ":") }
+    guard let badge = badges.first(where: { $0[1].contains(offer.type) }) else { return nil }
+    return String(badge[0])
+  }
 }
 
