@@ -39,6 +39,7 @@
 		BC0194D9224B9983005D5A13 /* ProductListingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194D8224B9983005D5A13 /* ProductListingService.swift */; };
 		BC0194DB224B99FE005D5A13 /* ProductListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194DA224B99FE005D5A13 /* ProductListing.swift */; };
 		BC0194DD224B9A2E005D5A13 /* ProductListingProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194DC224B9A2E005D5A13 /* ProductListingProduct.swift */; };
+		BC0194E4224B9C45005D5A13 /* ProductListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0194E3224B9C45005D5A13 /* ProductListingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		BC0194D8224B9983005D5A13 /* ProductListingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingService.swift; sourceTree = "<group>"; };
 		BC0194DA224B99FE005D5A13 /* ProductListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListing.swift; sourceTree = "<group>"; };
 		BC0194DC224B9A2E005D5A13 /* ProductListingProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingProduct.swift; sourceTree = "<group>"; };
+		BC0194E3224B9C45005D5A13 /* ProductListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				304698A521F0D7020056504A /* API */,
 				303522712239287A00AB1973 /* Services */,
 				306805AA21F22FB100B99BB8 /* Helper */,
+				BC0194DE224B9BC1005D5A13 /* ProductListing */,
 				3068059821F21F6C00B99BB8 /* ProductDetails */,
 				3046987521F0D55F0056504A /* AppDelegate.swift */,
 				3068059F21F2292700B99BB8 /* Models */,
@@ -256,6 +259,14 @@
 				301581462215A6AF00199803 /* Observable.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		BC0194DE224B9BC1005D5A13 /* ProductListing */ = {
+			isa = PBXGroup;
+			children = (
+				BC0194E3224B9C45005D5A13 /* ProductListingViewModel.swift */,
+			);
+			path = ProductListing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +381,7 @@
 				306805AC21F22FC600B99BB8 /* PriceFormatter.swift in Sources */,
 				304698A721F0D70D0056504A /* Resource.swift in Sources */,
 				301581492215A99200199803 /* InformationFormatter.swift in Sources */,
+				BC0194E4224B9C45005D5A13 /* ProductListingViewModel.swift in Sources */,
 				304698A421F0D5800056504A /* API.swift in Sources */,
 				30C4F5E521F27BBD0042865A /* ProductDetailsService.swift in Sources */,
 				30590CAC2211BA4300FE716E /* ImageService.swift in Sources */,
