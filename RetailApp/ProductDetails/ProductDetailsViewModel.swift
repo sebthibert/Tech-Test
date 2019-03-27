@@ -63,6 +63,10 @@ class ProductDetailsViewModel {
       return
     }
 
+    guard image.value == #imageLiteral(resourceName: "Placeholder") else {
+      return
+    }
+
     imageService.downloadImage(key: productDetails.imageKey) { [weak self] result in
       guard let strongSelf = self else {
         return
