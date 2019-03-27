@@ -12,12 +12,11 @@ class ProductListingViewModel {
 
   func getProducts(completion: @escaping () -> Void) {
     service.getProducts { [weak self] result in
-      switch result {
-      case .value(let productListing):
-        self?.products = productListing.products
+      do {
+        self?.products = try result.unwrapped().products
         completion()
-      case .error(let error):
-        print(error)
+      } catch {
+        print(error.localizedDescription)
       }
     }
   }
