@@ -19,7 +19,7 @@ class API {
   private let urlSession: URLSessionProtocol
   private let baseURL: URL
 
-  init(urlSession: URLSessionProtocol, baseURL: URL) {
+  init(urlSession: URLSessionProtocol = URLSession(configuration: .default), baseURL: URL = URL(string: "http://admin:password@interview-tech-testing.herokuapp.com/")!) {
     self.urlSession = urlSession
     self.baseURL = baseURL
   }
