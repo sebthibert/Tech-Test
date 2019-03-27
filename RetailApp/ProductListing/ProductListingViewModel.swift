@@ -11,7 +11,7 @@ class ProductListingViewModel {
   }
 
   func getProducts(completion: @escaping () -> Void) {
-    service.getProducts { [weak self] result in
+    service.getProductListing { [weak self] result in
       do {
         self?.products = try result.unwrapped().products
         completion()
