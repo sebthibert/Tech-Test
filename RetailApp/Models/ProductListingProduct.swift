@@ -1,6 +1,6 @@
 import Foundation
 
-struct ProductListingProduct: Codable, ProductRequest {
+struct ProductListingProduct: Codable, ProductRequest, Equatable {
   let id: String
   let imageKey: String
   let name: String

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Price: Codable {
+struct Price: Codable, Equatable {
   let currentPrice: Int
   let originalPrice: Int?
   let currencyCode: String

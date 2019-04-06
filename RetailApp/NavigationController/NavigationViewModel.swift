@@ -11,7 +11,7 @@ class NavigationViewModel {
     service.getUser(id: "2") { result in
       do {
         let productListingService = ProductListingServiceImplementation(api: API())
-        try completion(ProductListingViewModel(service: productListingService, user: result.unwrapped()))
+        try completion(ProductListingViewModel(productListingService: productListingService, user: result.unwrapped()))
       } catch {
         print(error.localizedDescription)
       }

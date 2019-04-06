@@ -1,21 +1,35 @@
 import Foundation
 
 class ProductListingViewModel {
-  private let service: ProductListingService
+  private let productListingService: ProductListingService
   private let user: User
-  private(set) var products: [ProductListingProduct] = []
 
-  init(service: ProductListingService, user: User) {
-    self.service = service
-    self.user = user
+  let products: Observable<[ProductListingProduct]>
+
+  private var productListing: ProductListing? {
+    didSet {
+      guard let value = productListing else {
+        return
+      }
+      updateObservables(productListing: value)
+    }
   }
 
-  func getProducts(completion: @escaping () -> Void) {
-    service.getProductListing { [weak self] result in
-      guard let self = self else { return }
+  init(productListingService: ProductListingService, user: User) {
+    self.productListingService = productListingService
+    self.user = user
+    self.products = Observable<[ProductListingProduct]>([])
+    getProducts()
+  }
+
+  private func updateObservables(productListing: ProductListing) {
+    products.value = filterProductOfferIdsWithUserOfferIds(productListing.products, user: user)
+  }
+
+  private func getProducts() {
+    productListingService.getProductListing { [weak self] result in
       do {
-        self.products = try self.filterProductOfferIdsWithUserOfferIds(result.unwrapped().products, user: self.user)
-        completion()
+        self?.productListing = try result.unwrapped()
       } catch {
         print(error.localizedDescription)
       }

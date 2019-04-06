@@ -25,18 +25,26 @@ class ProductListingViewController: UIViewController, UICollectionViewDataSource
     super.viewDidLoad()
     title = "Tops"
     collectionView.register(UINib(nibName: "ProductListingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductListingCollectionViewCell")
-    viewModel.getProducts { [weak self] in self?.collectionView.reloadData() }
+    bind()
+  }
+
+  deinit {
+    viewModel.products.unbind(self)
+  }
+
+  private func bind() {
+    viewModel.products.bind(self) { [weak self] _ in self?.collectionView.reloadData() }
   }
 
   // MARK: UICollectionViewDataSource
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return viewModel.products.count
+    return viewModel.products.value.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductListingCollectionViewCell", for: indexPath) as! ProductListingCollectionViewCell
-    let product = viewModel.products[indexPath.item]
+    let product = viewModel.products.value[indexPath.item]
     cell.configure(imageKey: product.imageKey, title: product.name, price: priceFormatter.formatPrice(product.price), badge: viewModel.badgeNameForOfferWithId(product.offerIds.first))
     return cell
   }
@@ -45,7 +53,7 @@ class ProductListingViewController: UIViewController, UICollectionViewDataSource
 
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let cell = collectionView.cellForItem(at: indexPath) as! ProductListingCollectionViewCell
-    delegate?.didSelectProduct(viewModel.products[indexPath.item], withImage: cell.productImageView.image)
+    delegate?.didSelectProduct(viewModel.products.value[indexPath.item], withImage: cell.productImageView.image)
   }
 
   // MARK: UICollectionViewDelegateFlowLayout
